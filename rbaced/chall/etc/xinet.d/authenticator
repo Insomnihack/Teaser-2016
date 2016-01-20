@@ -1,0 +1,14 @@
+service authenticator
+{
+	disable = no
+	socket_type = stream
+	protocol = tcp
+	wait = no
+	user = authenticator
+	port = 4242
+	type = UNLISTED
+	bind = 127.0.0.1
+
+	server = /home/authenticator/authenticator
+	server_args = /home/authenticator/creds_db.txt
+}

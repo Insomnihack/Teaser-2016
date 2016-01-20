@@ -1,0 +1,9 @@
+Local test credentials : admin / password
+
+/home/<user> is owned by root:<user> (for TPE)
+
+Running on AWS, up-to-date Ubuntu 14.04.3 LTS with the provided
+custom 4.3.3 kernel patched with grsecurity. RBAC is enabled.
+
+Except for what's in the RBAC policy, there is no firewall
+rules on OUTPUT requests.

@@ -1,0 +1,75 @@
+body {
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width: 800px;
+  margin-bottom: 50px;
+  line-height: 1.6em;
+  font-family: "roboto";
+}
+
+fieldset {
+    border-radius: 5px;
+    background-color: rgb(249, 249, 249);
+}
+
+legend {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hljs {
+    background-color: rgb(249, 249, 249);
+    font-size: 10pt;
+}
+
+pre {
+    margin: 0px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#menu {
+    text-align: center;
+}
+
+#login_block {
+    /*display: table;*/
+    /*margin: 0 auto;*/
+    width: 50%;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.error, .errors {
+    color: rgb(203, 0, 0);
+}
+
+.success {
+    color: green;
+}
+
+hr.separator {
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.button-error {
+    background: rgb(202, 60, 60);
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Coffee Gateway Interface - %s</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/pure-min.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <script language="javascript">
+        function update_img() {
+            var img = document.getElementById("type").value.toLowerCase();
+            img = img.replace(" ", "_") + ".png";
+            document.getElementById("coffee_choice").src = "/static/img/" + img;
+        }
+    </script>
+</head>
+<body onload="update_img();">
+    <div id="menu">
+	    <h1>Coffee Gateway Interface</h1>
+        <div class="pure-menu pure-menu-horizontal">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link"><i class="fa fa-home"></i> Home</a></li>
+                <li class="pure-menu-item"><a href="/cgi-bin/preferences" class="pure-menu-link"><i class="fa fa-cogs"></i> Preferences</a></li>
+                <li class="pure-menu-item"><a href="/cgi-bin/order" class="pure-menu-link"><i class="fa fa-coffee"></i> Order coffee</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr />
+    <div id="content">
+        <div class="pure-g">

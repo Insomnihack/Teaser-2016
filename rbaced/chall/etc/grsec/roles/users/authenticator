@@ -1,0 +1,34 @@
+role authenticator uT
+subject /
+	/ 					h
+	-CAP_ALL
+
+subject /home/authenticator/authenticator
+	/ 					h
+	/dev/null                               r
+	/etc/ld.so.cache                        r
+	/flag_part2  				r
+	/getflag_part2  			ix
+	/home/authenticator/creds_db.txt 	r
+	/lib/x86_64-linux-gnu/			rx
+	/lib64/ 				rx
+
+	$grsec_denied
+
+	-CAP_ALL
+	+PAX_MPROTECT
+	+PAX_RANDMMAP
+
+subject /usr/sbin/xinetd o
+	/					h
+	/etc/hosts.allow			r
+	/etc/hosts.deny				r
+	/etc/ld.so.cache			r
+	/home/authenticator/authenticator	rx
+	/home/authenticator/creds_db.txt	r
+	/lib					rxi
+	/usr/sbin/xinetd			rx
+
+	$grsec_denied
+
+	-CAP_ALL

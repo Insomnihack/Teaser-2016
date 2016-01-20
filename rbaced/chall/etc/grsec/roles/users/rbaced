@@ -1,0 +1,32 @@
+role rbaced uT
+subject /
+	/ 					h
+	/etc/ld.so.cache                        r
+	/dev/urandom                            r
+	/dev/random                             r
+	/lib/x86_64-linux-gnu                   rx
+	/lib64 					rx
+	/home/rbaced/www/index.html             r
+	/home/rbaced/www/cgi-bin/  		x
+	/home/rbaced/www/userdata/ 		cdrw
+	/home/rbaced/www/static/ 		r
+
+	$grsec_denied
+
+	-CAP_ALL
+	+PAX_MPROTECT
+	+PAX_RANDMMAP
+	RES_CPU 25s 25s
+	connect disabled
+	bind disabled
+
+subject /home/rbaced/rbaced
+	/flag_part1                             r
+	/home/rbaced/rbaced.conf 		r
+	/home/rbaced/rbaced 			x
+
+	+PAX_MPROTECT
+	+PAX_RANDMMAP
+	RES_CPU 25s 25s
+	connect 127.0.0.1:4242 stream tcp
+	bind disabled
